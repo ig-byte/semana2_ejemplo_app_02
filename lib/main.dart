@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-
+final test = const['asd','áasd'];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -112,6 +112,12 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ...test.map((e) => ListTile(
+              leading: const Icon(Icons.people_rounded),
+              title: Text(e),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
+            ),
+            ).toList()
           ],
         ),
       ),
